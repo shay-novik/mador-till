@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body class="page">
+  <header class="header seperator" id="js-header">
+    <!-- Let srcset pick an image, then use js to grab it and set as header's bg-image -->
+    <img id="js-responsive-img" src="/dist/img/{{ page.section }}.png" class="img-srcset" style="display:none;"> 
+    
+    {% include navigation.html %}
+
+    <section class="header__content">
+      <h1 class="title--section">{{ page.title }}</h1>
+    </section>
+  </header>
+
+  <div class="about">
+    <blockquote class="blockquote">
+      אודות תחום למידה מתוקשבת.... אודות תחום למידה מתוקשבת.... אודות תחום למידה מתוקשבת.... אודות תחום למידה מתוקשבת.... אודות
+      תחום למידה מתוקשבת.... אודות תחום למידה מתוקשבת.... אודות תחום למידה מתוקשבת.... אודות תחום למידה מתוקשבת.... אודות
+      תחום למידה מתוקשבת.... אודות תחום למידה מתוקשבת.... אודות תחום למידה מתוקשבת.... אודות תחום למידה מתוקשבת....
+    </blockquote>
+  </div>
+
+  <section class="projects">
+    <h1 class="projects__highlight">עבודות נבחרות</h1>
+
+    <!-- Iterate over projects.json and use page.data to specify the section -->
+    {% for project in site.data.projects[page.section] %}
+      <div class="projects__section seperator">
+        <div class="projects__description">
+          <h2 class="title title--margin-bottom">{{ project.name }}</h2>
+          <div class="projects__content">
+            <ul class="list">
+              <li class="list__item list__item--circle list__item--right"><span class="projects__content--bold">הצורך ההדרכתי:</span> {{ project.description["need"] }}</li>
+              <li class="list__item list__item--circle list__item--right"><span class="projects__content--bold">הפתרון:</span> {{ project.description["solution"] }}</li>
+              <li class="list__item list__item--circle list__item--right"><span class="projects__content--bold">אופי המוצר:</span> {{ project.description["about"] }}</li>
+            </ul>
+            <a href="https://www.youtube.com/watch?v={{ project.youtube-id }}" class="link link--youtube">לסרטון לחץ כאן</a>
+          </div>
+        </div>
+
+        <div class="projects__image-container">
+          <a href="https://www.youtube.com/watch?v={{ project.youtube-id }}">
+            <img src="https://i.ytimg.com/vi/{{ project.youtube-id }}/hqdefault.jpg" class="projects__image" alt="{{ project.name }} - תמונה">
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+</body>
+
+</html>

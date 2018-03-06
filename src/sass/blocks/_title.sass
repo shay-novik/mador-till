@@ -1,0 +1,23 @@
+.title
+  font-size: 2em
+  font-weight: bold
+
+  +modifier(header)
+    margin-top: 1em
+    font-size: 3em
+    
+    +min-breakpoint($medium-breakpoint)
+      font-size: 4em
+
+  +modifier(section)
+    font-size: 3em
+    padding: 1em 0.5em
+
+  +modifier(margin-top)
+    margin-top: 3rem
+
+    +min-breakpoint($large-breakpoint)
+      margin-top: 6rem
+
+  +modifier(margin-bottom)
+    margin-bottom: 1rem

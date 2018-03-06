@@ -1,0 +1,26 @@
+.icon
+  width: 3em
+  height: 3em
+  
+  +modifier(top-margin)
+    margin: 0.5em
+    
+  +modifier(clickable)
+    &:hover
+      cursor: pointer
+      
+  +modifier(hidden)
+    display: none
+
+  +element(hamburger)
+    position: fixed
+    right: 0
+    z-index: 3
+
+  +element(play)
+    width: 4em
+    height: 4em
+
+  +element(contact)
+    width: 6em
+    height: 6em

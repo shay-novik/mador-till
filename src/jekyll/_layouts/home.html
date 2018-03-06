@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body class="page">
+  <header class="header seperator" id="js-header">
+    <!-- Let srcset pick an image, then use js to grab it and set as header's bg-image -->
+    <img id="js-responsive-img" src="/dist/img/hero.png" class="img-srcset" style="display:none;" sizes="
+      (min-width: 480px) 480vw,
+      (min-width: 768px) 768vw,
+      (min-width: 1024px) 1024vw,
+      100vw" srcset="
+      /dist/img/hero.png 480w,
+      /dist/img/hero-tablet.png 768w,
+      /dist/img/hero-desktop.png 1024w">
+
+    {% include navigation.html %}
+
+    <section class="header__content">
+      <h1 class="title--header">מדור טי"ל</h1>
+      <h2 class="header__subtitle">בקריית ההדרכה של צה"ל בנגב</h2>
+
+      <div class="header__youtube">
+        <a class="header__youtube--link link" href="https://www.youtube.com/watch?v=Q_3w73gV3yk">
+          <img class="icon__play" src="/dist/img/play.svg" alt="נגן">
+          <span class="header__youtube--caption">צפה בסרטון תדמית</span>
+        </a>
+      </div>
+    </section>
+  </header>
+
+  {% include about.html %}
+
+  {% include contact.html %}
+</body>
+
+</html>

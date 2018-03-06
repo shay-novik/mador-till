@@ -1,0 +1,35 @@
+.navigation
+  background: $mine-shaft
+  
+  position: fixed
+  min-height: 100vh
+  padding: 3.5em 0.5em 0.5em 0.5em
+  
+  // Slide in effect
+  right: -500%
+  transition: right 0.2s ease-in-out
+
+  z-index: 2
+  overflow-y: auto
+  border-left: 1px solid $ocean-green;
+  text-align: right
+  
+  +modifier(active)
+    right: 0
+
+  &>li
+    color: $white
+    font-size: 1.3em
+    border-bottom: solid 0.1em $emerald
+
+  +element(submenu)
+    &>li
+      font-size: 0.8em
+      text-indent: 0.5em
+      
+      &::before
+        content: "•"
+        display: inline
+        font-size: 1em
+        margin-left: 0.3em
+        color: $emerald

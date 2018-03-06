@@ -1,0 +1,26 @@
+.contact
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  +element(icons)
+    width: 100%
+    display: flex
+    flex-direction: column
+    margin: 1em 0 3rem 0
+
+    +min-breakpoint($medium-breakpoint)
+      flex-direction: row
+      align-items: flex-start
+      justify-content: space-between
+
+    +min-breakpoint($large-breakpoint)
+      margin-bottom: 6rem
+
+  +element(icon)
+    max-width: 100%
+    flex: 1
+    justify-content: center
+    text-align: center
+    margin: 1em

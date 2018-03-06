@@ -1,0 +1,54 @@
+.header
+  display: flex
+  flex-direction: column
+  background: $sky
+  +responsive-background
+  
+  +element(icon-row)
+    display: flex
+    justify-content: flex-end
+
+  +element(content)
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 2em
+    
+    +min-breakpoint($medium-breakpoint)
+      margin-bottom: 4em
+  
+  +element(subtitle)
+    +min-breakpoint($medium-breakpoint)
+      font-size: 1.4em
+
+  +element(youtube)
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &::before, &::after
+      content: ""
+      width: 100%
+      height: 0.2em
+      margin: 0.5em
+      background-color: $white
+
+      +min-breakpoint($medium-breakpoint)
+        width: 150%
+
+      +min-breakpoint($large-breakpoint)
+        width: 200%
+
+    +modifier(link)
+      display: flex
+      align-items: center
+
+      +min-breakpoint($large-breakpoint)
+        flex-direction: column
+
+    +modifier(caption)
+      margin-right: 0.4em
+
+      +min-breakpoint($large-breakpoint)
+        margin-top: 0.5em
