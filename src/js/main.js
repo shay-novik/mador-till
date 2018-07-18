@@ -38,7 +38,7 @@ class ResponsiveBackgroundImage {
     let src = typeof this.img.currentSrc !== 'undefined' ? this.img.currentSrc : this.img.src;
     if (this.src !== src) {
       this.src = src;
-      this.element.style.backgroundImage = 'url("' + this.src + '")';
+      this.element.style.backgroundImage = `url("${this.src}")`;
 
     }
   }
