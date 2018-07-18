@@ -6,13 +6,11 @@ let hamburger_icon = document.querySelector("#js-hamburger"),
 // Open/close the menu
 hamburger_icon.addEventListener("click", () => {
   hamburger_menu.classList.toggle("navigation--active");
-  console.log("hamburger clicked")
 });
 
 navigation_links.forEach((link) => {
   link.addEventListener("click", () => {
     hamburger_menu.classList.toggle("navigation--active");
-    console.log("link clicked")
   })
 });
 
