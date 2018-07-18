@@ -1,16 +1,16 @@
 // Hamburger menu
-let hamburger_icon = document.querySelector("#js-hamburger"),
-  hamburger_menu = document.querySelector("#js-nav-menu"),
-  navigation_links = document.querySelectorAll("#js-nav-menu .link")
+let hamburger_icon = document.querySelector('#js-hamburger'),
+  hamburger_menu = document.querySelector('#js-nav-menu'),
+  navigation_links = document.querySelectorAll('#js-nav-menu .link')
 
 // Open/close the menu
-hamburger_icon.addEventListener("click", () => {
-  hamburger_menu.classList.toggle("navigation--active")
+hamburger_icon.addEventListener('click', () => {
+  hamburger_menu.classList.toggle('navigation--active')
 })
 
 navigation_links.forEach((link) => {
-  link.addEventListener("click", () => {
-    hamburger_menu.classList.toggle("navigation--active")
+  link.addEventListener('click', () => {
+    hamburger_menu.classList.toggle('navigation--active')
   })
 })
 
@@ -38,7 +38,7 @@ class ResponsiveBackgroundImage {
     let src = typeof this.img.currentSrc !== 'undefined' ? this.img.currentSrc : this.img.src
     if (this.src !== src) {
       this.src = src
-      this.element.style.backgroundImage = `url("${this.src}")`
+      this.element.style.backgroundImage = `url('${this.src}')`
 
     }
   }
