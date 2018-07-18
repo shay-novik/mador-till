@@ -63,3 +63,6 @@ typings/
 .gulp
 
 .jekyll-metadata
+
+# compiled statics files
+docs/
